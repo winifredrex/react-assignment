@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
+  padding: 20px;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app-inner {
+  max-width: 800px;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background-color: #222;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+select:focus {
+  border-color: #d64161;
+  box-shadow: 0 0 5px rgba(214, 65, 97, 0.7);
+}
+
+select:disabled {
+  background-color: #333;
+  color: #666;
+  cursor: not-allowed;
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(to right, #6b5b95, #d64161);
+  border: none;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  background-color: #550000;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  color: #ff9999;
+}
+
+.recommendations {
+  margin-top: 30px;
+}
+
+.recommendation-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-3px);
+}
+
+.recommendation-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.recommendation-header .number {
+  background: linear-gradient(to right, #6b5b95, #d64161);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.recommendation-header h3 {
+  margin: 0;
+}
+
+.recommendation-card p {
+  color: #ccc;
+  line-height: 1.6;
 }
