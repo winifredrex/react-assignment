@@ -11,7 +11,7 @@ import listOfMoodOption from './store/mood.json';
 export default function App() {
   const [state, dispatch] = useReducer(appReducer, initialState);
 
-  const GEMINI_API_KEY = 'AIzaSyBxUXXmvfFlPXJsA5_cjT0594fFmglxVAc';
+  const GEMINI_API_KEY = 'AIzaSyABjaU15Yir6v7EZKBrX7vNpUjTl4y05rw';
 
   useEffect(() => {
     if (state.genre) {
